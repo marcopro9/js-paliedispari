@@ -25,7 +25,42 @@
     }
 */
 
-/* SECONDO ESERCIZIO
+// /* SECONDO ESERCIZIO
+  // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5
+    var pariDispari = prompt("scegli pari o dispari");
+    var numeroUtente = parseInt(prompt("scegli un numero da 1 a 5"));
+    console.log("questo è il numero scelto dall\'utente: " + numeroUtente);
 
+  // funzione per far scegliere un numero casuale al Computer
+    function numeroComputer() {
+      var numeroCasuale = Math.floor(Math.random() * 5) + 1;
+      return numeroCasuale;
+    }
+    var numeroPc = numeroComputer();
+    console.log("questo è il numero del Computer: " + numeroPc);
 
-*/
+  // Sommo il numero Utente con quello del numeroComputer
+    var totale = numeroUtente + numeroPc;
+    console.log("questo è il totale: " + totale);
+
+  // controllo se la somma dei due numeri è pari o dispari
+    function risultatoPariDispari(){
+      if (totale % 2 == 0) {
+          risultato = "pari";
+      } else {
+          risultato = "dispari";
+        }
+      return risultato;
+    }
+    var risultato = risultatoPariDispari();
+    
+  // Risultato
+    var messaggioUtente;
+    if (pariDispari == risultato) {
+      messaggioUtente = "L\'utente ha vinto";
+    } else {
+      messaggioUtente = "L\'utente ha perso";
+    }
+    console.log(messaggioUtente);
+
+// */
